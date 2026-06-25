@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sana Özel...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="turntable.css">
+</head>
+<body>
+    <!-- Ekranın ortasındaki daktilo yazısı -->
+    <div class="center-text-container">
+        <div id="typewriter-text"></div><span class="cursor">✍️</span>
+    </div>
+
+    <!-- Mektup silindikten sonra parlayacak olan üst yazı -->
+    <div id="glowing-text">Sen benim bu karanlık ve uzun hayatımın ışığısın</div>
+
+    <!-- Fare ile etkileşime girilecek görünmez katman -->
+    <div id="interaction-layer"></div>
+
+    <!-- Plak Çalar (Turntable) Modalı -->
+    <div id="turntable-modal" class="hidden">
+        <div class="modal-overlay"></div>
+        <div class="turntable-container">
+            <button id="close-modal">&times;</button>
+            <div class="turntable-base">
+                <div class="vinyl-record" id="vinyl">
+                    <div class="vinyl-center" id="vinyl-cover"></div>
+                </div>
+                <div class="tonearm" id="tonearm"></div>
+                <button id="skip-forward-btn" title="15 Saniye İleri Sar">&#9193;</button>
+            </div>
+            <p id="now-playing-text">Senin için çalıyor...</p>
+        </div>
+    </div>
+
+    <!-- Müzik Oynatıcı (Gizli) -->
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
